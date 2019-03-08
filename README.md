@@ -1,8 +1,10 @@
-# WEB system
+# Kačių Veislių informacinė sistema
 - [ ] Replace "WEB system" with your system name
 
 ## Description
 - [ ] Provide WEB system description in few sentences - its purpose, users, etc.
+
+- [ ] Sistema pagal paieškos kriterijus parodys tam tikros veisles kačių nuotraukas su jų aprašais, ir suteiks galimybę vartotojui komentuoti ant šių aprašų.
 
 ## Entity definition
 - [ ] Define the entity ("object" that will be manipulated) of WEB system
@@ -14,10 +16,19 @@
 - [ ] Entity should have at least 5 custom attributes
     - [ ] Each attribute should have a type defined: number, string, ISO 8601 date string, boolean, object, array or other
     - [ ] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
+    
+- [ ] Comment
+    - [ ] commentID (number, 8)
+    - [ ] creationDate (ISO 8601 date string)
+    - [ ] modificationDate (ISO 8601 date string)
+    - [ ] commentText (string, 50)
+    - [ ] username (string, 40)
 
 ## API definition
 - [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
+    - [ ] search breeds by name ; list of cat breeds ; 
 - [ ] Optionally define additional API methods that WEB system is going to expose
+    - [ ] define the below i guess
 - [ ] API should have at least 4 methods
     - [ ] A method to return entity by ID. Should not have request body
     - [ ] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
