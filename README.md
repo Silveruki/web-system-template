@@ -23,12 +23,18 @@
     - [ ] modificationDate (ISO 8601 date string)
     - [ ] commentText (string, 150)
     - [ ] username (string, 40)
+    
+- [ ] Cat
+    - [ ] 
 
 ## API definition
 - [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
-    - [ ] search breeds by name ; list of cat breeds ; 
-    GET https://api.thecatapi.com/v1/breeds/search?q=
-    GET https://api.thecatapi.com/v1/breeds
+    - [ ] search breeds by name GET https://api.thecatapi.com/v1/breeds/search?q=
+    - [ ] GET komentarai by cat GET /api/komentaras
+    - [ ] POST komentaras POST /api/komentaras
+    - [ ] PUT update komentarą PUT /api/komentaras/{id}
+    - [ ] DELETE komentarą  DELETE /api/komentaras/{id}
+    - [ ] list of cat breeds GET https://api.thecatapi.com/v1/breeds
 - [ ] Optionally define additional API methods that WEB system is going to expose
     - [ ] define the below
         - [ ] API should have at least 4 methods
