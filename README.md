@@ -18,34 +18,39 @@
     - [ ] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
     
 - [ ] Comment
-    - [ ] commentID (number, 8)
-    - [ ] creationDate (ISO 8601 date string)
-    - [ ] modificationDate (ISO 8601 date string)
-    - [ ] commentText (string, 150)
-    - [ ] username (string, 40)
+    - [ ] commentID (number, 8, mandatory)
+    - [ ] catID (string, 8, mandatory)
+    - [ ] creationDate (ISO 8601 date string, mandatory)
+    - [ ] modificationDate (ISO 8601 date string, mandatory)
+    - [ ] commentText (string, 150, mandatory)
+    - [ ] username (string, 40, mandatory)
     
 - [ ] Cat
-    - [ ] 
+    - [ ] catID (string, 8, mandatory)
+    - [ ] name (string, 25, mandatory)
+    - [ ] altName (string, 100)
+    - [ ] lifeSpan (string, 10, mandatory)
+    - [ ] childFriendly (integer, 1, mandatory)
+    - [ ] dogFriendly (integer, 1, mandatory)
+    - [ ] healthIssues(integer, 1, mandatory)
 
 ## API definition
-- [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
-    - [ ] search breeds by name GET https://api.thecatapi.com/v1/breeds/search?q=
-    - [ ] GET komentarai by cat GET /api/komentaras
-    - [ ] POST komentaras POST /api/komentaras
-    - [ ] PUT update komentarą PUT /api/komentaras/{id}
-    - [ ] DELETE komentarą  DELETE /api/komentaras/{id}
-    - [ ] list of cat breeds GET https://api.thecatapi.com/v1/breeds
+- [ ] API methods
+    - [ ] get breeds by name GET https://api.thecatapi.com/v1/breeds/search?q={name} {400, 404, 406}
+    - [ ] get cat image by id GET https://api.thecatapi.com/v1/images/search?breed_id={catID} {400, 404, 406}
+    - [ ] GET komentarai by cat GET /api/komentaras/{catID} {400, 404, 406}
+    - [ ] POST komentaras POST /api/komentaras {400, 404}
+    - [ ] PUT update komentarą PUT /api/komentaras/{id} {400, 401, 404}
+    - [ ] DELETE komentarą  DELETE /api/komentaras/{id} {400, 401, 404}
+    - [ ] get a list of cat breeds GET https://api.thecatapi.com/v1/breeds
 - [ ] Optionally define additional API methods that WEB system is going to expose
     - [ ] define the below
         - [ ] API should have at least 4 methods
-            - [ ] A method to return entity by ID. Should not have request body
             - [ ] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
                 - [ ] Return only entities that match pattern in one of its attributes
                 - [ ] Return 10 entities starting provided index
                 - [ ] Return sorted entities by one of its attributes (both ascending and descending)
                 - [ ] Other (should be approved by Product Owner (PO))
-            - [ ] A method to remove entity by ID. Returns removed entity. Should not have request body
-            - [ ] A method to update entity by ID. Accepts entity to update and returns updated entity
         - [ ] Each method should have HTTP method defined
         - [ ] Each method should have URI defined (use {id} as entity ID placeholder)
         - [ ] Should return all 4xx errors in unified format. Define format using `joi` language
