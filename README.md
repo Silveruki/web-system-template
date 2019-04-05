@@ -27,21 +27,23 @@
 ## API definition
 - [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
     - [ ] search breeds by name ; list of cat breeds ; 
+    GET https://api.thecatapi.com/v1/breeds/search?q=
+    GET https://api.thecatapi.com/v1/breeds
 - [ ] Optionally define additional API methods that WEB system is going to expose
-    - [ ] define the below i guess
-- [ ] API should have at least 4 methods
-    - [ ] A method to return entity by ID. Should not have request body
-    - [ ] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
-        - [ ] Return only entities that match pattern in one of its attributes
-        - [ ] Return 10 entities starting provided index
-        - [ ] Return sorted entities by one of its attributes (both ascending and descending)
-        - [ ] Other (should be approved by Product Owner (PO))
-    - [ ] A method to remove entity by ID. Returns removed entity. Should not have request body
-    - [ ] A method to update entity by ID. Accepts entity to update and returns updated entity
-- [ ] Each method should have HTTP method defined
-- [ ] Each method should have URI defined (use {id} as entity ID placeholder)
-- [ ] Should return all 4xx errors in unified format. Define format using `joi` language
-- [ ] Should return all 5xx errors in unified format. Define format using `joi` language
+    - [ ] define the below
+        - [ ] API should have at least 4 methods
+            - [ ] A method to return entity by ID. Should not have request body
+            - [ ] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
+                - [ ] Return only entities that match pattern in one of its attributes
+                - [ ] Return 10 entities starting provided index
+                - [ ] Return sorted entities by one of its attributes (both ascending and descending)
+                - [ ] Other (should be approved by Product Owner (PO))
+            - [ ] A method to remove entity by ID. Returns removed entity. Should not have request body
+            - [ ] A method to update entity by ID. Accepts entity to update and returns updated entity
+        - [ ] Each method should have HTTP method defined
+        - [ ] Each method should have URI defined (use {id} as entity ID placeholder)
+        - [ ] Should return all 4xx errors in unified format. Define format using `joi` language
+        - [ ] Should return all 5xx errors in unified format. Define format using `joi` language
 
 ## UI definition
 - [ ] Define the structure of how visually the WEB system is going to look like
@@ -53,3 +55,5 @@
         - [ ] Depending on chosen header of API method that returns multiple entities, it should be posible to select specific 10 entities starting index, sort entities by attribute, filter entities by attribute pattern, or other (should be approved by Product Owner (PO))
     - [ ] A component to create a new entity/edit existing entity. It should be posbile to create new entity and edit selected entity
         - [ ] Each attribute should have a dedicated editor field: text box for string or number, checkbox or radio buttons for boolean, date picker for date, etc.
+
+-[ ] https://wireframe.cc/ogiSsA
