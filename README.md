@@ -21,7 +21,7 @@
     - [ ] commentID (number, 8)
     - [ ] creationDate (ISO 8601 date string)
     - [ ] modificationDate (ISO 8601 date string)
-    - [ ] commentText (string, 50)
+    - [ ] commentText (string, 150)
     - [ ] username (string, 40)
 
 ## API definition
@@ -56,4 +56,4 @@
     - [ ] A component to create a new entity/edit existing entity. It should be posbile to create new entity and edit selected entity
         - [ ] Each attribute should have a dedicated editor field: text box for string or number, checkbox or radio buttons for boolean, date picker for date, etc.
 
--[ ] https://wireframe.cc/ogiSsA
+- [ ] https://wireframe.cc/ogiSsA
